@@ -1,0 +1,102 @@
+<html>
+    <head>
+         <style>
+             
+             .showbox{
+                 position: relative;
+                 width: 300px;
+                 height: 100px;
+                 overflow: hidden;
+                 margin-top: 100px;
+                 margin-left: 100px;
+             }
+             
+             
+             .box{
+                 position: absolute;
+                 top:0;
+                 left: 0;
+                 width: 900px;
+                 height: 100px;
+                 display: flex;
+                 
+             }
+             
+             
+             .box > img{
+                 width: 300px;
+                 height: 100px;
+             }
+             
+             button{
+                 margin-left: 100px;
+             }
+             
+        </style>
+    </head>
+    
+    
+    
+    
+    <body>
+    
+    
+     <div class="showbox">
+        <div class="box">
+            <img src="111.JPG">
+            <img src="mobile_bag.JPG">
+            <img src="mobile_beauty.JPG">
+        </div>
+     </div>
+        
+     <button>Press</button>
+    
+        
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+      <script>
+        
+            $(document).ready(
+                 function(){
+                     
+                     
+                    setInterval(
+                        
+                        
+                          function(){
+                             
+                               $(".box").animate(
+                                  {
+                                      
+                                      left:"-300px"
+                                      
+                                      
+                                      
+                                  },2000,
+                                    
+                             
+                             function(){
+                                 var x= $(".box img").eq(0).detach();
+                             
+                                 $(".box").append(x);
+                                 $(".box").css("left","0px");
+                                                          
+                                 
+                                 
+                             });
+                             
+                        
+                             
+                             
+                             
+                         },1500);
+                        
+                
+                     
+                 });
+          
+        </script>
+    
+    </body>
+
+
+</html>
